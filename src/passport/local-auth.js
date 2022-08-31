@@ -13,7 +13,6 @@ passport.deserializeUser(async (id, done) => {
 });
 
 passport.use('local-signup', new LocalStrategy({
-  usernameField: 'nombre',
   usernameField: 'email',
   passwordField: 'password',
   passReqToCallback: true
@@ -33,7 +32,6 @@ passport.use('local-signup', new LocalStrategy({
 }));
 
 passport.use('local-signin', new LocalStrategy({
-  usernameField: 'nombre',
   usernameField: 'email',
   passwordField: 'password',
   passReqToCallback: true
